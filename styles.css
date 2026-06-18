@@ -55,12 +55,24 @@ a {
   padding: 22px 0 0;
 }
 
-.brand {
-  display: inline-flex;
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
-.brand img {
-  width: 54px;
+.brand {
+  display: inline-flex;
+  align-items: center;
+}
+
+.brand--openblast img {
+  width: 42px;
+  height: auto;
+}
+
+.brand--enaex {
+  width: 86px;
   height: auto;
 }
 
