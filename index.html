@@ -6,7 +6,7 @@
   <title>Dashboards | US Vale Verde</title>
   <meta
     name="description"
-    content="Central de acesso aos dashboards da unidade de serviço US Vale Verde."
+    content="Hub de acesso aos dashboards da unidade de serviço US Vale Verde."
   >
   <link rel="stylesheet" href="./styles.css">
 </head>
@@ -16,64 +16,83 @@
       <a class="brand" href="./index.html" aria-label="OpenBlast">
         <img src="./assets/openblast-logo.png" alt="OpenBlast">
       </a>
+
+      <div class="topbar-meta">
+        <span class="meta-label">US Vale Verde</span>
+      </div>
     </header>
 
     <main class="content">
-      <section class="hero">
-        <p class="eyebrow">US Vale Verde</p>
-        <h1>Dashboards</h1>
-        <p class="summary">
-          Página central para acesso aos painéis desenvolvidos para a unidade de serviço.
-        </p>
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow">Hub de acesso</p>
+        <h1 id="page-title">Dashboards</h1>
       </section>
 
-      <section class="catalog" aria-labelledby="catalog-title">
-        <div class="section-header">
-          <h2 id="catalog-title">Ambientes publicados</h2>
-          <p>Referências ativas para navegação direta.</p>
+      <section class="overview" aria-label="Resumo">
+        <div class="overview-card">
+          <span class="overview-value">01</span>
+          <span class="overview-label">Dashboard publicado</span>
+        </div>
+        <div class="overview-card">
+          <span class="overview-value">01</span>
+          <span class="overview-label">Ambiente ativo</span>
+        </div>
+        <div class="overview-card overview-card--muted">
+          <span class="overview-value">US</span>
+          <span class="overview-label">Unidade de serviço</span>
+        </div>
+      </section>
+
+      <section class="hub" aria-labelledby="hub-title">
+        <div class="section-bar">
+          <h2 id="hub-title">Acessos</h2>
+          <span class="section-note">Atual</span>
         </div>
 
-        <article class="dashboard-card">
-          <div class="tags">
-            <span class="tag tag--active">Disponível</span>
-            <span class="tag">Operação</span>
-          </div>
+        <div class="dashboard-grid">
+          <article class="dashboard-tile">
+            <div class="tile-head">
+              <span class="tile-status">Live</span>
+              <span class="tile-type">Operação</span>
+            </div>
 
-          <div class="card-grid">
-            <div class="copy">
+            <div class="tile-body">
               <h3>Aplicação de Emulsão</h3>
-              <p>
-                Dashboard operacional para acompanhamento da aplicação de emulsão,
-                publicado em GitHub Pages.
-              </p>
+              <p>Monitoramento operacional</p>
             </div>
 
             <a
-              class="button"
+              class="tile-link"
               href="https://silvathiagoferreira.github.io/aplicacao-de-emulsao/"
               target="_blank"
               rel="noreferrer"
             >
-              Abrir dashboard
+              Acessar
             </a>
-          </div>
-        </article>
+          </article>
 
-        <article class="dashboard-card dashboard-card--future">
-          <div class="tags">
-            <span class="tag tag--neutral">Próximos painéis</span>
-          </div>
-
-          <div class="card-grid">
-            <div class="copy">
-              <h3>Expansão do portfólio</h3>
-              <p>
-                Novos dashboards podem ser adicionados nesta página mantendo o mesmo padrão
-                de navegação e apresentação.
-              </p>
+          <article class="dashboard-tile dashboard-tile--placeholder" aria-hidden="true">
+            <div class="tile-head">
+              <span class="tile-type">Próximo</span>
             </div>
-          </div>
-        </article>
+
+            <div class="tile-body">
+              <h3>Novo dashboard</h3>
+              <p>Em publicação</p>
+            </div>
+          </article>
+
+          <article class="dashboard-tile dashboard-tile--placeholder" aria-hidden="true">
+            <div class="tile-head">
+              <span class="tile-type">Próximo</span>
+            </div>
+
+            <div class="tile-body">
+              <h3>Novo dashboard</h3>
+              <p>Em publicação</p>
+            </div>
+          </article>
+        </div>
       </section>
     </main>
   </div>
