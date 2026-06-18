@@ -21,8 +21,14 @@
 
     <main class="content">
       <section class="hero" aria-labelledby="page-title">
-        <p class="eyebrow">Hub de acesso</p>
-        <h1 id="page-title">Dashboards</h1>
+        <div class="hero-copy">
+          <p class="eyebrow">Hub de acesso</p>
+          <h1 id="page-title">Dashboards</h1>
+        </div>
+        <div class="hero-mark" aria-hidden="true">
+          <span class="hero-mark__diamond"></span>
+          <span class="hero-mark__bar"></span>
+        </div>
       </section>
 
       <section class="tiles" aria-label="Dashboards publicados">
@@ -32,9 +38,15 @@
           target="_blank"
           rel="noreferrer"
         >
-          <span class="tile-kicker">Dashboard 01</span>
+          <div class="tile-top">
+            <span class="tile-kicker">Dashboard 01</span>
+            <span class="tile-state">Live</span>
+          </div>
           <h2>Aplicação de Emulsão</h2>
-          <span class="tile-action">Acessar</span>
+          <div class="tile-bottom">
+            <span class="tile-caption">Operação</span>
+            <span class="tile-action">Acessar</span>
+          </div>
         </a>
       </section>
     </main>

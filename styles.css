@@ -1,14 +1,14 @@
 :root {
   --bg: #ffffff;
   --text: #3f4652;
-  --text-strong: #262d38;
+  --text-strong: #303744;
   --text-soft: #7a828f;
-  --line: #d8dde4;
-  --line-strong: #c2c9d3;
+  --line: #d3d9e1;
+  --line-strong: #bac3cf;
   --accent: #f20519;
   --accent-dark: #cf0415;
-  --accent-soft: #fff0f2;
-  --shadow: 0 22px 50px rgba(38, 45, 56, 0.08);
+  --accent-soft: #fff1f3;
+  --shadow: 0 24px 52px rgba(40, 47, 58, 0.09);
 }
 
 * {
@@ -23,11 +23,11 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    linear-gradient(180deg, rgba(242, 5, 25, 0.045) 0, rgba(242, 5, 25, 0) 180px),
-    linear-gradient(90deg, rgba(63, 70, 82, 0.02) 1px, transparent 1px),
-    linear-gradient(rgba(63, 70, 82, 0.02) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(242, 5, 25, 0.055) 0, rgba(242, 5, 25, 0) 180px),
+    linear-gradient(90deg, rgba(63, 70, 82, 0.018) 1px, transparent 1px),
+    linear-gradient(rgba(63, 70, 82, 0.018) 1px, transparent 1px),
     var(--bg);
-  background-size: auto, 120px 120px, 120px 120px, auto;
+  background-size: auto, 132px 132px, 132px 132px, auto;
   color: var(--text);
   font-family: Aptos, "Segoe UI", sans-serif;
 }
@@ -77,7 +77,18 @@ a {
 }
 
 .hero {
-  margin-bottom: 42px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 32px;
+  margin-bottom: 44px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-copy {
+  display: grid;
+  gap: 0;
 }
 
 .eyebrow {
@@ -99,8 +110,38 @@ a {
 
 .hero h1 {
   color: var(--text-strong);
-  font-size: clamp(3rem, 7vw, 5.4rem);
-  line-height: 0.92;
+  font-size: clamp(3.2rem, 7vw, 5.8rem);
+  line-height: 0.9;
+}
+
+.hero-mark {
+  position: relative;
+  flex: 0 0 220px;
+  height: 104px;
+}
+
+.hero-mark__diamond,
+.hero-mark__bar {
+  position: absolute;
+  display: block;
+}
+
+.hero-mark__diamond {
+  top: 6px;
+  right: 112px;
+  width: 48px;
+  height: 48px;
+  background: var(--accent);
+  transform: rotate(45deg);
+}
+
+.hero-mark__bar {
+  right: 0;
+  bottom: 0;
+  width: 152px;
+  height: 16px;
+  background: var(--text-strong);
+  clip-path: polygon(12% 0, 100% 0, 88% 100%, 0 100%);
 }
 
 .tiles {
@@ -110,12 +151,14 @@ a {
 .tile {
   position: relative;
   display: grid;
-  gap: 26px;
-  width: min(360px, 100%);
-  min-height: 260px;
-  padding: 28px;
+  gap: 30px;
+  width: min(420px, 100%);
+  min-height: 282px;
+  padding: 28px 28px 26px;
   border: 1px solid var(--line-strong);
-  background: rgba(255, 255, 255, 0.9);
+  background:
+    linear-gradient(135deg, transparent 0 76%, rgba(242, 5, 25, 0.06) 76% 100%),
+    rgba(255, 255, 255, 0.95);
   box-shadow: var(--shadow);
   transition:
     transform 180ms ease,
@@ -127,9 +170,20 @@ a {
   content: "";
   position: absolute;
   inset: 0 auto auto 0;
-  width: 92px;
-  height: 6px;
+  width: 112px;
+  height: 7px;
   background: var(--accent);
+}
+
+.tile::after {
+  content: "";
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  width: 16px;
+  height: 16px;
+  background: var(--accent);
+  transform: rotate(45deg);
 }
 
 .tile:hover,
@@ -137,6 +191,14 @@ a {
   transform: translateY(-3px);
   border-color: var(--accent);
   box-shadow: 0 24px 54px rgba(38, 45, 56, 0.12);
+}
+
+.tile-top,
+.tile-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
 }
 
 .tile-kicker {
@@ -154,11 +216,20 @@ a {
   text-transform: uppercase;
 }
 
+.tile-state,
+.tile-caption {
+  color: var(--text-soft);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
 .tile h2 {
   align-self: center;
-  max-width: 220px;
+  max-width: 260px;
   color: var(--text-strong);
-  font-size: 1.95rem;
+  font-size: 2.1rem;
   line-height: 1.02;
 }
 
@@ -168,8 +239,8 @@ a {
   justify-content: center;
   width: fit-content;
   min-height: 46px;
-  padding: 0 16px;
-  border: 1px solid var(--line);
+  padding: 0 18px;
+  border: 1px solid var(--text-strong);
   color: var(--text-strong);
   font-size: 0.76rem;
   font-weight: 700;
@@ -192,7 +263,13 @@ a {
   }
 
   .hero {
+    display: grid;
     margin-bottom: 28px;
+    padding-bottom: 22px;
+  }
+
+  .hero-mark {
+    display: none;
   }
 
   .tile {
@@ -202,5 +279,11 @@ a {
 
   .tile h2 {
     font-size: 1.65rem;
+  }
+
+  .tile-top,
+  .tile-bottom {
+    align-items: start;
+    flex-wrap: wrap;
   }
 }
