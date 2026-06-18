@@ -1,14 +1,14 @@
 :root {
   --bg: #ffffff;
   --text: #3f4652;
-  --text-strong: #303744;
+  --text-strong: #2f3642;
   --text-soft: #7a828f;
-  --line: #d3d9e1;
-  --line-strong: #bac3cf;
+  --line: #d8dde4;
+  --line-strong: #c3cad4;
   --accent: #f20519;
-  --accent-dark: #cf0415;
   --accent-soft: #fff1f3;
-  --shadow: 0 24px 52px rgba(40, 47, 58, 0.09);
+  --panel: #fbfbfc;
+  --shadow: 0 20px 44px rgba(40, 47, 58, 0.08);
 }
 
 * {
@@ -23,11 +23,11 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    linear-gradient(180deg, rgba(242, 5, 25, 0.055) 0, rgba(242, 5, 25, 0) 180px),
-    linear-gradient(90deg, rgba(63, 70, 82, 0.018) 1px, transparent 1px),
-    linear-gradient(rgba(63, 70, 82, 0.018) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(242, 5, 25, 0.035) 0, rgba(242, 5, 25, 0) 160px),
+    linear-gradient(90deg, rgba(63, 70, 82, 0.014) 1px, transparent 1px),
+    linear-gradient(rgba(63, 70, 82, 0.014) 1px, transparent 1px),
     var(--bg);
-  background-size: auto, 132px 132px, 132px 132px, auto;
+  background-size: auto, 144px 144px, 144px 144px, auto;
   color: var(--text);
   font-family: Aptos, "Segoe UI", sans-serif;
 }
@@ -73,75 +73,45 @@ a {
 }
 
 .content {
-  padding: 56px 0 72px;
+  padding: 64px 0 80px;
 }
 
 .hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  gap: 32px;
-  margin-bottom: 44px;
-  padding-bottom: 28px;
+  display: grid;
+  gap: 10px;
+  margin-bottom: 36px;
+  padding-bottom: 24px;
   border-bottom: 1px solid var(--line);
 }
 
-.hero-copy {
-  display: grid;
-  gap: 0;
-}
-
 .eyebrow {
-  margin: 0 0 12px;
+  margin: 0;
   color: var(--accent);
   font-size: 0.74rem;
   font-weight: 700;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
 }
 
 .hero h1,
 .tile h2 {
   margin: 0;
-  font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  font-weight: 600;
-  letter-spacing: -0.03em;
+  font-family: Aptos Display, Aptos, "Segoe UI", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.04em;
 }
 
 .hero h1 {
   color: var(--text-strong);
-  font-size: clamp(3.2rem, 7vw, 5.8rem);
-  line-height: 0.9;
+  font-size: clamp(3rem, 7vw, 5rem);
+  line-height: 0.92;
 }
 
-.hero-mark {
-  position: relative;
-  flex: 0 0 220px;
-  height: 104px;
-}
-
-.hero-mark__diamond,
-.hero-mark__bar {
-  position: absolute;
-  display: block;
-}
-
-.hero-mark__diamond {
-  top: 6px;
-  right: 112px;
-  width: 48px;
-  height: 48px;
-  background: var(--accent);
-  transform: rotate(45deg);
-}
-
-.hero-mark__bar {
-  right: 0;
-  bottom: 0;
-  width: 152px;
-  height: 16px;
-  background: var(--text-strong);
-  clip-path: polygon(12% 0, 100% 0, 88% 100%, 0 100%);
+.hero-subtitle {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.98rem;
+  font-weight: 600;
 }
 
 .tiles {
@@ -151,14 +121,13 @@ a {
 .tile {
   position: relative;
   display: grid;
-  gap: 30px;
-  width: min(420px, 100%);
-  min-height: 282px;
-  padding: 28px 28px 26px;
+  gap: 28px;
+  width: min(520px, 100%);
+  min-height: 260px;
+  padding: 28px;
   border: 1px solid var(--line-strong);
-  background:
-    linear-gradient(135deg, transparent 0 76%, rgba(242, 5, 25, 0.06) 76% 100%),
-    rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  background: var(--panel);
   box-shadow: var(--shadow);
   transition:
     transform 180ms ease,
@@ -169,28 +138,16 @@ a {
 .tile::before {
   content: "";
   position: absolute;
-  inset: 0 auto auto 0;
-  width: 112px;
-  height: 7px;
+  inset: 0 0 auto 0;
+  height: 4px;
   background: var(--accent);
-}
-
-.tile::after {
-  content: "";
-  position: absolute;
-  right: 18px;
-  top: 18px;
-  width: 16px;
-  height: 16px;
-  background: var(--accent);
-  transform: rotate(45deg);
 }
 
 .tile:hover,
 .tile:focus-visible {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   border-color: var(--accent);
-  box-shadow: 0 24px 54px rgba(38, 45, 56, 0.12);
+  box-shadow: 0 22px 48px rgba(38, 45, 56, 0.11);
 }
 
 .tile-top,
@@ -225,12 +182,24 @@ a {
   text-transform: uppercase;
 }
 
-.tile h2 {
+.tile-main {
+  display: grid;
+  gap: 10px;
   align-self: center;
-  max-width: 260px;
+}
+
+.tile h2 {
+  max-width: 320px;
   color: var(--text-strong);
-  font-size: 2.1rem;
-  line-height: 1.02;
+  font-size: 2rem;
+  line-height: 1.04;
+}
+
+.tile-description {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.98rem;
+  line-height: 1.5;
 }
 
 .tile-action {
@@ -238,10 +207,11 @@ a {
   align-items: center;
   justify-content: center;
   width: fit-content;
-  min-height: 46px;
+  min-height: 42px;
   padding: 0 18px;
-  border: 1px solid var(--text-strong);
+  border: 1px solid var(--line-strong);
   color: var(--text-strong);
+  background: #ffffff;
   font-size: 0.76rem;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -263,13 +233,8 @@ a {
   }
 
   .hero {
-    display: grid;
     margin-bottom: 28px;
     padding-bottom: 22px;
-  }
-
-  .hero-mark {
-    display: none;
   }
 
   .tile {
