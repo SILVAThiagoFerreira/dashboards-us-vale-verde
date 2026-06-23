@@ -3,71 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboards | US Vale Verde</title>
-  <meta
-    name="description"
-    content="Hub de acesso aos dashboards da unidade de serviço US Vale Verde."
-  >
+  <title>Dashboards · US Vale Verde</title>
+  <meta name="description" content="Hub de acesso aos dashboards da US Vale Verde.">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <div class="page">
-    <header class="topbar">
-      <div class="brand-lockup" aria-label="Marcas">
-        <a class="brand brand--openblast" href="./index.html" aria-label="OpenBlast">
-          <img src="./assets/openblast-logo.png" alt="OpenBlast">
-        </a>
-        <img class="brand brand--enaex" src="./assets/enaex-logo.png" alt="Enaex">
-      </div>
-      <span class="unit-label">US Vale Verde</span>
-    </header>
+  <header class="topbar">
+    <a class="brand" href="./index.html" aria-label="OpenBlast">
+      <img src="./assets/openblast-logo.png" alt="OpenBlast">
+    </a>
+    <span class="unit-label">US Vale Verde</span>
+  </header>
 
-    <main class="content">
-      <section class="hero" aria-labelledby="page-title">
-        <p class="eyebrow">Hub de acesso</p>
-        <h1 id="page-title">Dashboards</h1>
-      </section>
+  <main class="page">
+    <section class="hero">
+      <p class="eyebrow">Hub de acesso</p>
+      <h1>Dashboards</h1>
+      <p class="hero__sub">Painéis operacionais da unidade.</p>
+    </section>
 
-      <section class="tiles" aria-label="Dashboards publicados">
-        <a
-          class="tile"
-          href="https://silvathiagoferreira.github.io/aplicacao-de-emulsao/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div class="tile-top">
-            <span class="tile-kicker">Dashboard 01</span>
-          </div>
-          <div class="tile-main">
-            <h2>Aplicação Diária de Emulsão</h2>
-            <p class="tile-description">Acompanhamento operacional</p>
-          </div>
-          <div class="tile-bottom">
-            <span class="tile-caption">Operação</span>
-            <span class="tile-action">Acessar</span>
-          </div>
-        </a>
+    <section class="tiles" aria-label="Dashboards publicados">
+      <a
+        class="tile"
+        href="https://silvathiagoferreira.github.io/aplicacao-de-emulsao/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <div class="tile__top">
+          <span class="tile__kicker">Dashboard 01</span>
+          <span class="tile__live"><span class="dot"></span>Online</span>
+        </div>
+        <div class="tile__main">
+          <h2>Aplicação Diária de Emulsão</h2>
+          <p>Acompanhamento operacional</p>
+        </div>
+        <div class="tile__bottom">
+          <span class="tile__caption">Operação</span>
+          <span class="tile__action">Acessar →</span>
+        </div>
+      </a>
 
-        <a
-          class="tile"
-          href="https://silvathiagoferreira.github.io/granulometria-rom/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div class="tile-top">
-            <span class="tile-kicker">Dashboard 02</span>
-          </div>
-          <div class="tile-main">
-            <h2>Granulometria do Material Desmontado (ROM)</h2>
-            <p class="tile-description">Curva granulométrica, D80 e SPH Index</p>
-          </div>
-          <div class="tile-bottom">
-            <span class="tile-caption">Qualidade do desmonte</span>
-            <span class="tile-action">Acessar</span>
-          </div>
-        </a>
-      </section>
-    </main>
-  </div>
+      <a
+        class="tile"
+        href="https://silvathiagoferreira.github.io/granulometria-rom/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <div class="tile__top">
+          <span class="tile__kicker">Dashboard 02</span>
+          <span class="tile__live"><span class="dot"></span>Online</span>
+        </div>
+        <div class="tile__main">
+          <h2>Granulometria do Material Desmontado (ROM)</h2>
+          <p>Curva granulométrica, D80 e SPH Index</p>
+        </div>
+        <div class="tile__bottom">
+          <span class="tile__caption">Qualidade do desmonte</span>
+          <span class="tile__action">Acessar →</span>
+        </div>
+      </a>
+    </section>
+  </main>
 </body>
 </html>
