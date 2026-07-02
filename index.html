@@ -20,18 +20,22 @@
       <p class="eyebrow">Hub de acesso</p>
       <h1>Dashboards</h1>
       <p class="hero__sub">Painéis operacionais da unidade.</p>
+      <div class="publication-note" role="note" aria-label="Status de publicação dos dashboards">
+        <strong>Publicados online:</strong> Aplicação Diária de Emulsão e Sismografia.
+        <span>Os dashboards de Granulometria, Notas Fiscais e Planos de Fogo permanecem em revisão.</span>
+      </div>
     </section>
 
-    <section class="tiles" aria-label="Dashboards publicados">
+    <section class="tiles" aria-label="Status dos dashboards">
       <a
-        class="tile"
+        class="tile tile--published"
         href="https://silvathiagoferreira.github.io/aplicacao-de-emulsao/"
         target="_blank"
         rel="noreferrer"
       >
         <div class="tile__top">
           <span class="tile__kicker">Dashboard 01</span>
-          <span class="tile__live"><span class="dot"></span>Online</span>
+          <span class="tile__live"><span class="dot"></span>Online no GitHub Pages</span>
         </div>
         <div class="tile__main">
           <h2>Aplicação Diária de Emulsão</h2>
@@ -43,15 +47,10 @@
         </div>
       </a>
 
-      <a
-        class="tile"
-        href="https://silvathiagoferreira.github.io/granulometria-rom/"
-        target="_blank"
-        rel="noreferrer"
-      >
+      <article class="tile tile--review" aria-label="Dashboard 02 em revisão">
         <div class="tile__top">
           <span class="tile__kicker">Dashboard 02</span>
-          <span class="tile__live"><span class="dot"></span>Online</span>
+          <span class="tile__review">Em revisão</span>
         </div>
         <div class="tile__main">
           <h2>Granulometria do Material Desmontado (ROM)</h2>
@@ -59,19 +58,19 @@
         </div>
         <div class="tile__bottom">
           <span class="tile__caption">Qualidade do desmonte</span>
-          <span class="tile__action">Acessar →</span>
+          <span class="tile__action tile__action--muted">Sem publicação</span>
         </div>
-      </a>
+      </article>
 
       <a
-        class="tile"
+        class="tile tile--published"
         href="https://silvathiagoferreira.github.io/sismografia-us-vale-verde/"
         target="_blank"
         rel="noreferrer"
       >
         <div class="tile__top">
           <span class="tile__kicker">Dashboard 03</span>
-          <span class="tile__live"><span class="dot"></span>Online</span>
+          <span class="tile__live"><span class="dot"></span>Online no GitHub Pages</span>
         </div>
         <div class="tile__main">
           <h2>Sismografia (NBR 9653)</h2>
@@ -83,15 +82,10 @@
         </div>
       </a>
 
-      <a
-        class="tile"
-        href="https://silvathiagoferreira.github.io/notas-fiscais-us-vale-verde/"
-        target="_blank"
-        rel="noreferrer"
-      >
+      <article class="tile tile--review" aria-label="Dashboard 04 em revisão">
         <div class="tile__top">
           <span class="tile__kicker">Dashboard 04</span>
-          <span class="tile__live"><span class="dot"></span>Online</span>
+          <span class="tile__review">Em revisão</span>
         </div>
         <div class="tile__main">
           <h2>Notas Fiscais - US Vale Verde</h2>
@@ -99,19 +93,14 @@
         </div>
         <div class="tile__bottom">
           <span class="tile__caption">Logística / financeiro</span>
-          <span class="tile__action">Acessar →</span>
+          <span class="tile__action tile__action--muted">Sem publicação</span>
         </div>
-      </a>
+      </article>
 
-      <a
-        class="tile"
-        href="https://silvathiagoferreira.github.io/planos-de-fogo-us-vale-verde/"
-        target="_blank"
-        rel="noreferrer"
-      >
+      <article class="tile tile--review" aria-label="Dashboard 05 em revisão">
         <div class="tile__top">
           <span class="tile__kicker">Dashboard 05</span>
-          <span class="tile__live"><span class="dot"></span>Online</span>
+          <span class="tile__review">Em revisão</span>
         </div>
         <div class="tile__main">
           <h2>Planos de Fogo (Previsto × Realizado)</h2>
@@ -119,9 +108,9 @@
         </div>
         <div class="tile__bottom">
           <span class="tile__caption">Planejamento do desmonte</span>
-          <span class="tile__action">Acessar →</span>
+          <span class="tile__action tile__action--muted">Sem publicação</span>
         </div>
-      </a>
+      </article>
     </section>
   </main>
 </body>
