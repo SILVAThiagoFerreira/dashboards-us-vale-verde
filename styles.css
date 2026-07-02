@@ -150,12 +150,12 @@ img { display: block; max-width: 100%; }
 .tile--review:hover,
 .tile--review:focus-visible {
   border-color: var(--rule);
-  transform: none;
-  box-shadow: none;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(56, 66, 75, 0.04);
 }
 
 .tile--review::before {
-  background: var(--faint);
+  background: #b7bec4;
 }
 
 .tile__top {
@@ -198,6 +198,13 @@ img { display: block; max-width: 100%; }
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+}
+
+.tile--review .tile__main h2,
+.tile--review .tile__main p,
+.tile--review .tile__caption,
+.tile--review .tile__action {
+  color: var(--muted);
 }
 
 .tile__main {
@@ -246,6 +253,10 @@ img { display: block; max-width: 100%; }
 
 .tile__action--muted {
   color: var(--muted);
+}
+
+.tile--review .tile__action--muted {
+  color: var(--faint);
 }
 
 /* ---------- Responsivo ---------- */
