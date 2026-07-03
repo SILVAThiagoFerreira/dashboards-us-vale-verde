@@ -3,153 +3,207 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboards · US Vale Verde</title>
-  <meta name="description" content="Hub de acesso aos dashboards da US Vale Verde.">
+  <title>Dashboards | US Vale Verde</title>
+  <meta
+    name="description"
+    content="Página central de acesso aos dashboards da US Vale Verde."
+  >
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="./index.html" aria-label="OpenBlast">
-      <img src="./assets/openblast-logo.png" alt="OpenBlast">
-    </a>
-    <span class="unit-label">US Vale Verde</span>
-  </header>
-
-  <main class="page">
-    <section class="hero">
-      <p class="eyebrow">Hub de acesso</p>
-      <h1>Dashboards</h1>
-      <p class="hero__sub">Painéis operacionais da unidade.</p>
-      <div class="publication-note" role="note" aria-label="Status de publicação dos dashboards">
-        <strong>Publicados online:</strong> Aplicação Diária de Emulsão e Sismografia.
-        <span>Os dashboards de Granulometria, Notas Fiscais e Planos de Fogo seguem acessíveis, mas ainda estão em processo de atualização.</span>
-      </div>
-    </section>
-
-    <section class="tiles" aria-label="Status dos dashboards">
-      <a
-        class="tile tile--published"
-        href="https://silvathiagoferreira.github.io/aplicacao-de-emulsao/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <div class="tile__top">
-          <span class="tile__kicker">Dashboard 01</span>
-          <span class="tile__live"><span class="dot"></span>Online no GitHub Pages</span>
-        </div>
-        <div class="tile__main">
-          <h2>Aplicação Diária de Emulsão</h2>
-          <p>Acompanhamento operacional</p>
-        </div>
-        <div class="tile__bottom">
-          <span class="tile__caption">Operação</span>
-          <span class="tile__action">Acessar →</span>
-        </div>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="./index.html" aria-label="OpenBlast">
+        <img src="./assets/openblast-logo.png" alt="OpenBlast">
       </a>
+    </header>
 
-      <a
-        class="tile tile--review"
-        href="https://silvathiagoferreira.github.io/granulometria-rom/"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Dashboard 02 em atualização"
-      >
-        <div class="tile__top">
-          <span class="tile__kicker">Dashboard 02</span>
-          <span class="tile__review">Em atualização</span>
-        </div>
-        <div class="tile__main">
-          <h2>Granulometria do Material Desmontado (ROM)</h2>
-          <p>Curva granulométrica, D80 e SPH Index</p>
-        </div>
-        <div class="tile__bottom">
-          <span class="tile__caption">Qualidade do desmonte</span>
-          <span class="tile__action tile__action--muted">Abrir painel</span>
-        </div>
-      </a>
+    <main class="layout">
+      <section class="intro">
+        <p class="eyebrow">Dashboards</p>
+        <h1>Dashboards | US Vale Verde</h1>
+        <p class="lead">
+          Ambiente central para acesso aos painéis operacionais e executivos da unidade.
+        </p>
+      </section>
 
-      <a
-        class="tile tile--published"
-        href="https://silvathiagoferreira.github.io/sismografia-us-vale-verde/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <div class="tile__top">
-          <span class="tile__kicker">Dashboard 03</span>
-          <span class="tile__live"><span class="dot"></span>Online no GitHub Pages</span>
+      <section class="panel-list" aria-labelledby="dashboards-title">
+        <div class="section-head">
+          <h2 id="dashboards-title">Dashboards publicados</h2>
+          <p>Links diretos para os ambientes já disponíveis.</p>
         </div>
-        <div class="tile__main">
-          <h2>Sismografia (NBR 9653)</h2>
-          <p>Vibração (PPV), frequência, airblast e distância escalonada</p>
-        </div>
-        <div class="tile__bottom">
-          <span class="tile__caption">Segurança do desmonte</span>
-          <span class="tile__action">Acessar →</span>
-        </div>
-      </a>
 
-      <a
-        class="tile tile--review"
-        href="https://silvathiagoferreira.github.io/notas-fiscais-us-vale-verde/"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Dashboard 04 em atualização"
-      >
-        <div class="tile__top">
-          <span class="tile__kicker">Dashboard 04</span>
-          <span class="tile__review">Em atualização</span>
-        </div>
-        <div class="tile__main">
-          <h2>Notas Fiscais - US Vale Verde</h2>
-          <p>Valor do frete, total das NFs, quantidade e nº de notas por mês</p>
-        </div>
-        <div class="tile__bottom">
-          <span class="tile__caption">Logística / financeiro</span>
-          <span class="tile__action tile__action--muted">Abrir painel</span>
-        </div>
-      </a>
+        <article class="dashboard-card dashboard-card--live">
+          <div class="card-meta">
+            <span class="status">Disponível</span>
+            <span class="type">Operacional</span>
+          </div>
 
-      <a
-        class="tile tile--review"
-        href="https://silvathiagoferreira.github.io/planos-de-fogo-us-vale-verde/"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Dashboard 05 em atualização"
-      >
-        <div class="tile__top">
-          <span class="tile__kicker">Dashboard 05</span>
-          <span class="tile__review">Em atualização</span>
-        </div>
-        <div class="tile__main">
-          <h2>Planos de Fogo (Previsto × Realizado)</h2>
-          <p>Séries temporais por aspecto, precisão do plano e tabela</p>
-        </div>
-        <div class="tile__bottom">
-          <span class="tile__caption">Planejamento do desmonte</span>
-          <span class="tile__action tile__action--muted">Abrir painel</span>
-        </div>
-      </a>
+          <div class="card-body">
+            <div>
+              <h3>Aplicação de Emulsão</h3>
+              <p>
+                Monitoramento da operação de aplicação de emulsão com publicação em GitHub Pages.
+              </p>
+            </div>
 
-      <a
-        class="tile tile--published"
-        href="https://silvathiagoferreira.github.io/desvios-inclinacao-azimute-us-vale-verde/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <div class="tile__top">
-          <span class="tile__kicker">Dashboard 06</span>
-          <span class="tile__live"><span class="dot"></span>Online no GitHub Pages</span>
-        </div>
-        <div class="tile__main">
-          <h2>Aderência ao Projeto de Perfuração - INCLINAÇÃO AZIMUTE E PROFUNDIDADE</h2>
-          <p>Aderência ao projeto — ângulo frontal, Δ azimute e Δ profundidade</p>
-        </div>
-        <div class="tile__bottom">
-          <span class="tile__caption">Qualidade da perfuração</span>
-          <span class="tile__action">Acessar →</span>
-        </div>
-      </a>
-    </section>
-  </main>
+            <a
+              class="card-link"
+              href="https://silvathiagoferreira.github.io/aplicacao-de-emulsao/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Acessar dashboard
+            </a>
+          </div>
+        </article>
+
+        <article class="dashboard-card dashboard-card--live">
+          <div class="card-meta">
+            <span class="status">Disponível</span>
+            <span class="type">Qualidade</span>
+          </div>
+
+          <div class="card-body">
+            <div>
+              <h3>Granulometria do Material Desmontado (ROM)</h3>
+              <p>
+                Análise da curva granulométrica, D80 e SPH Index dos desmontes realizados na unidade.
+              </p>
+            </div>
+
+            <a
+              class="card-link"
+              href="https://silvathiagoferreira.github.io/granulometria-rom/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Acessar dashboard
+            </a>
+          </div>
+        </article>
+
+        <article class="dashboard-card dashboard-card--live">
+          <div class="card-meta">
+            <span class="status">Disponível</span>
+            <span class="type">Segurança</span>
+          </div>
+
+          <div class="card-body">
+            <div>
+              <h3>Sismografia (NBR 9653)</h3>
+              <p>
+                Vibração (PPV), frequência, sobrepressão acústica (airblast) e distância escalonada
+                dos desmontes, com conformidade avaliada pela NBR 9653:2018.
+              </p>
+            </div>
+
+            <a
+              class="card-link"
+              href="https://silvathiagoferreira.github.io/sismografia-us-vale-verde/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Acessar dashboard
+            </a>
+          </div>
+        </article>
+
+        <article class="dashboard-card dashboard-card--live">
+          <div class="card-meta">
+            <span class="status">Disponível</span>
+            <span class="type">Logística</span>
+          </div>
+
+          <div class="card-body">
+            <div>
+              <h3>Notas Fiscais - US Vale Verde</h3>
+              <p>
+                Séries temporais de valor do frete, valor total das NFs, quantidade
+                transportada e número de notas, com recortes por produto e origem.
+              </p>
+            </div>
+
+            <a
+              class="card-link"
+              href="https://silvathiagoferreira.github.io/notas-fiscais-us-vale-verde/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Acessar dashboard
+            </a>
+          </div>
+        </article>
+
+        <article class="dashboard-card dashboard-card--live">
+          <div class="card-meta">
+            <span class="status">Disponível</span>
+            <span class="type">Planejamento</span>
+          </div>
+
+          <div class="card-body">
+            <div>
+              <h3>Planos de Fogo (Previsto × Realizado)</h3>
+              <p>
+                Comparação do desmonte planejado com o executado: séries temporais
+                por aspecto (diâmetro, malha, cargas, RC, volume, explosivos), precisão
+                do plano, filtros e tabela de planos casados.
+              </p>
+            </div>
+
+            <a
+              class="card-link"
+              href="https://silvathiagoferreira.github.io/planos-de-fogo-us-vale-verde/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Acessar dashboard
+            </a>
+          </div>
+        </article>
+
+        <article class="dashboard-card dashboard-card--live">
+          <div class="card-meta">
+            <span class="status">Disponível</span>
+            <span class="type">Perfuração</span>
+          </div>
+
+          <div class="card-body">
+            <div>
+              <h3>Aderência ao Projeto de Perfuração - INCLINAÇÃO AZIMUTE E PROFUNDIDADE</h3>
+              <p>
+                Aderência dos furos ao projeto — ângulo frontal, Δ azimute e Δ profundidade,
+                com limites da ferramenta OpenBlast e meta de 80%.
+              </p>
+            </div>
+
+            <a
+              class="card-link"
+              href="https://silvathiagoferreira.github.io/desvios-inclinacao-azimute-us-vale-verde/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Acessar dashboard
+            </a>
+          </div>
+        </article>
+
+        <article class="dashboard-card dashboard-card--empty">
+          <div class="card-meta">
+            <span class="status status--muted">Em expansão</span>
+          </div>
+
+          <div class="card-body">
+            <div>
+              <h3>Novos dashboards</h3>
+              <p>
+                Este hub está preparado para concentrar os próximos painéis conforme forem publicados.
+              </p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
