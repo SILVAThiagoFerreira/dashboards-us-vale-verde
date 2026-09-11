@@ -1,188 +1,217 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboards · US Vale Verde</title>
-  <link rel="icon" type="image/png" href="./assets/enaex-favicon.png">
-  <meta name="description" content="Hub de acesso aos dashboards da US Vale Verde.">
-  <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-  <header class="topbar">
-    <a class="brand" href="./index.html" aria-label="Enaex Brasil">
-      <img src="./assets/enaex-logo-white.png" alt="Enaex Brasil">
-    </a>
-    <h1>Dashboards - US Vale Verde</h1>
-  </header>
-
-  <main class="page">
-    <section class="tiles" aria-label="Status dos dashboards">
-      <a
-        class="tile tile--published"
-        href="https://silvathiagoferreira.github.io/aplicacao-de-emulsao/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <div class="tile__top">
-          <span class="tile__kicker">Dashboard 01</span>
-          <span class="tile__live"><span class="dot"></span>Online</span>
-        </div>
-        <div class="tile__main">
-          <h2>Aplicação Diária de Emulsão</h2>
-          <p>Acompanhamento operacional</p>
-        </div>
-        <div class="tile__bottom">
-          <span class="tile__caption">Operação</span>
-          <span class="tile__action">Acessar →</span>
-        </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Hub de dashboards da operação OpenBlast na US Vale Verde." />
+    <meta name="theme-color" content="#38424B" />
+    <meta name="application-name" content="Hub de Dashboards | OpenBlast" />
+    <link rel="icon" href="./assets/enaex-favicon.png" type="image/png" />
+    <title>Hub de Dashboards | OpenBlast</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css?v=20260911_1930" />
+    <script src="./script.js?v=20260911_1930" defer></script>
+  </head>
+  <body>
+    <header class="topbar shell" aria-label="Cabeçalho OpenBlast">
+      <a class="brand" href="./" aria-label="OpenBlast">
+        <img class="brand__logo" src="./assets/openblast-logo.png" alt="" />
+        <span class="brand__wordmark">Open<strong>Blast</strong></span>
       </a>
+      <span class="topbar__title">Dashboards · US Vale Verde</span>
+    </header>
 
-      <a
-        class="tile tile--review"
-        href="https://silvathiagoferreira.github.io/granulometria-rom/"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Dashboard 02 em atualização"
-      >
-        <div class="tile__top">
-          <span class="tile__kicker">Dashboard 02</span>
-          <span class="tile__review">Em atualização</span>
+    <main class="shell page">
+      <section class="directory-controls" aria-label="Encontrar dashboards">
+        <div class="directory-search">
+          <label for="dashboard-search">Buscar dashboard</label>
+          <div class="directory-search__field">
+            <input
+              id="dashboard-search"
+              type="search"
+              placeholder="Nome, indicador ou assunto"
+              autocomplete="off"
+              spellcheck="false"
+            />
+            <button id="search-clear" class="search-clear" type="button" hidden aria-label="Limpar busca">Limpar</button>
+          </div>
         </div>
-        <div class="tile__main">
-          <h2>Granulometria do Material Desmontado (ROM)</h2>
-          <p>Curva granulométrica, D80 e SPH Index</p>
-        </div>
-        <div class="tile__bottom">
-          <span class="tile__caption">Qualidade do desmonte</span>
-          <span class="tile__action tile__action--muted">Abrir painel</span>
-        </div>
-      </a>
 
-      <a
-        class="tile tile--published"
-        href="https://silvathiagoferreira.github.io/sismografia-us-vale-verde/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <div class="tile__top">
-          <span class="tile__kicker">Dashboard 03</span>
-          <span class="tile__live"><span class="dot"></span>Online</span>
+        <div class="directory-filter">
+          <label for="dashboard-group">Grupo</label>
+          <select id="dashboard-group">
+            <option value="all">Todos os dashboards</option>
+            <option value="gerais">Dashboards gerais</option>
+            <option value="locais">Dashboards locais</option>
+          </select>
         </div>
-        <div class="tile__main">
-          <h2>Sismografia (NBR 9653)</h2>
-          <p>Vibração (PPV), frequência, airblast e distância escalonada</p>
-        </div>
-        <div class="tile__bottom">
-          <span class="tile__caption">Segurança do desmonte</span>
-          <span class="tile__action">Acessar →</span>
-        </div>
-      </a>
 
-      <a
-        class="tile tile--review"
-        href="https://silvathiagoferreira.github.io/notas-fiscais-us-vale-verde/"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Dashboard 04 em atualização"
-      >
-        <div class="tile__top">
-          <span class="tile__kicker">Dashboard 04</span>
-          <span class="tile__review">Em atualização</span>
-        </div>
-        <div class="tile__main">
-          <h2>Notas Fiscais - US Vale Verde</h2>
-          <p>Valor do frete, total das NFs, quantidade e nº de notas por mês</p>
-        </div>
-        <div class="tile__bottom">
-          <span class="tile__caption">Logística / financeiro</span>
-          <span class="tile__action tile__action--muted">Abrir painel</span>
-        </div>
-      </a>
+        <p id="dashboard-count" class="directory-count" role="status" aria-live="polite">8 de 8 dashboards</p>
+      </section>
 
-      <a
-        class="tile tile--review"
-        href="https://silvathiagoferreira.github.io/planos-de-fogo-us-vale-verde/"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Dashboard 05 em atualização"
-      >
-        <div class="tile__top">
-          <span class="tile__kicker">Dashboard 05</span>
-          <span class="tile__review">Em atualização</span>
-        </div>
-        <div class="tile__main">
-          <h2>Planos de Fogo (Previsto × Realizado)</h2>
-          <p>Séries temporais por aspecto, precisão do plano e tabela</p>
-        </div>
-        <div class="tile__bottom">
-          <span class="tile__caption">Planejamento do desmonte</span>
-          <span class="tile__action tile__action--muted">Abrir painel</span>
-        </div>
-      </a>
+      <section id="hub-grid" class="hub-grid" aria-label="Lista de dashboards">
+        <section class="hub-section" data-section="gerais" aria-labelledby="dashboards-gerais">
+          <header class="hub-section__header">
+            <h2 id="dashboards-gerais">Dashboards gerais</h2>
+          </header>
+          <div class="tool-grid">
+            <a
+              class="tool-card"
+              href="https://silvathiagoferreira.github.io/aplicacao-de-emulsao/"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-group="gerais"
+              data-search="aplicação diária de emulsão acompanhamento operacional operação online"
+              aria-label="Abrir Aplicação Diária de Emulsão"
+              aria-describedby="tooltip-emulsao"
+            >
+              <span class="tool-card__hex" aria-hidden="true">
+                <svg viewBox="0 0 48 48" role="img"><path d="M15 31h18M17 27c2-5 6-8 12-9l-2-3m2 3-3 2M13 34h22" /><path d="M21 21c1-3 3-5 6-6" /></svg>
+              </span>
+              <h3>Aplicação Diária de Emulsão</h3>
+              <span id="tooltip-emulsao" class="tool-card__tooltip" role="tooltip"><span class="tool-card__tooltip-status">Online</span>Acompanhamento operacional da aplicação diária de emulsão.</span>
+            </a>
 
-      <a
-        class="tile tile--published"
-        href="https://silvathiagoferreira.github.io/desvios-inclinacao-azimute-us-vale-verde/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <div class="tile__top">
-          <span class="tile__kicker">Dashboard 06</span>
-          <span class="tile__live"><span class="dot"></span>Online</span>
-        </div>
-        <div class="tile__main">
-          <h2>Aderência ao Projeto de Perfuração - INCLINAÇÃO, AZIMUTE E PROFUNDIDADE</h2>
-          <p>Aderência ao projeto — ângulo frontal, Δ azimute e Δ profundidade</p>
-        </div>
-        <div class="tile__bottom">
-          <span class="tile__caption">Qualidade da perfuração</span>
-          <span class="tile__action">Acessar →</span>
-        </div>
-      </a>
+            <a
+              class="tool-card"
+              href="https://silvathiagoferreira.github.io/granulometria-rom/"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-group="gerais"
+              data-search="granulometria material desmontado rom curva granulométrica d80 sph index qualidade desmonte atualização"
+              aria-label="Abrir Granulometria do Material Desmontado ROM"
+              aria-describedby="tooltip-granulometria"
+            >
+              <span class="tool-card__hex" aria-hidden="true">
+                <svg viewBox="0 0 48 48" role="img"><path d="M12 35h25M16 31V22m6 9V16m6 15V12m6 19V19" /><path d="M14 18h6m6-5h6m5 5h-3" /></svg>
+              </span>
+              <h3>Granulometria do Material Desmontado (ROM)</h3>
+              <span id="tooltip-granulometria" class="tool-card__tooltip" role="tooltip"><span class="tool-card__tooltip-status">Em atualização</span>Curva granulométrica, D80 e SPH Index do material desmontado.</span>
+            </a>
 
-      <a
-        class="tile tile--review"
-        href="https://silvathiagoferreira.github.io/temposemovimentos/#/login"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Dashboard 07 em atualização"
-      >
-        <div class="tile__top">
-          <span class="tile__kicker">Dashboard 07</span>
-          <span class="tile__review">Em atualização</span>
-        </div>
-        <div class="tile__main">
-          <h2>Tempos e Movimentos</h2>
-          <p>Acompanhamento da frota em operações de carregamento de explosivo</p>
-        </div>
-        <div class="tile__bottom">
-          <span class="tile__caption">Operação</span>
-          <span class="tile__action tile__action--muted">Abrir painel</span>
-        </div>
-      </a>
+            <a
+              class="tool-card"
+              href="https://silvathiagoferreira.github.io/sismografia-us-vale-verde/"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-group="gerais"
+              data-search="sismografia nbr 9653 vibração ppv frequência airblast distância escalonada segurança desmonte online"
+              aria-label="Abrir Sismografia NBR 9653"
+              aria-describedby="tooltip-sismografia"
+            >
+              <span class="tool-card__hex" aria-hidden="true">
+                <svg viewBox="0 0 48 48" role="img"><path d="M10 25h7l3-8 5 17 5-20 3 11h5" /><path d="M11 35h27" /></svg>
+              </span>
+              <h3>Sismografia (NBR 9653)</h3>
+              <span id="tooltip-sismografia" class="tool-card__tooltip" role="tooltip"><span class="tool-card__tooltip-status">Online</span>Vibração (PPV), frequência, airblast e distância escalonada.</span>
+            </a>
 
-      <a
-        class="tile tile--review"
-        href="https://silvathiagoferreira.github.io/kpis-seguranca-trabalho/"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Dashboard 08 em atualização"
-      >
-        <div class="tile__top">
-          <span class="tile__kicker">Dashboard 08</span>
-          <span class="tile__review">Em atualização</span>
-        </div>
-        <div class="tile__main">
-          <h2>KPI'S de Segurança do Trabalho - Pessoas e Processos</h2>
-          <p>Indicadores de saúde ocupacional, capacitação, processos e prevenção</p>
-        </div>
-        <div class="tile__bottom">
-          <span class="tile__caption">Segurança do trabalho</span>
-          <span class="tile__action tile__action--muted">Abrir painel</span>
-        </div>
-      </a>
-    </section>
-  </main>
-</body>
+            <a
+              class="tool-card"
+              href="https://silvathiagoferreira.github.io/desvios-inclinacao-azimute-us-vale-verde/"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-group="gerais"
+              data-search="aderência projeto perfuração inclinação azimute profundidade qualidade perfuração online"
+              aria-label="Abrir Aderência ao Projeto de Perfuração"
+              aria-describedby="tooltip-perfuracao"
+            >
+              <span class="tool-card__hex" aria-hidden="true">
+                <svg viewBox="0 0 48 48" role="img"><circle cx="24" cy="24" r="10" /><circle cx="24" cy="24" r="3" /><path d="M24 10v6m0 16v6M10 24h6m16 0h6M31 17l5-5m-24 24 5-5" /></svg>
+              </span>
+              <h3>Aderência ao Projeto de Perfuração - Inclinação, Azimute e Profundidade</h3>
+              <span id="tooltip-perfuracao" class="tool-card__tooltip" role="tooltip"><span class="tool-card__tooltip-status">Online</span>Aderência ao projeto: ângulo frontal, Δ azimute e Δ profundidade.</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="hub-section" data-section="locais" aria-labelledby="dashboards-locais">
+          <header class="hub-section__header">
+            <h2 id="dashboards-locais">Dashboards locais</h2>
+          </header>
+          <div class="tool-grid">
+            <a
+              class="tool-card"
+              href="https://silvathiagoferreira.github.io/notas-fiscais-us-vale-verde/"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-group="locais"
+              data-search="notas fiscais us vale verde frete total quantidade notas mês logística financeiro atualização"
+              aria-label="Abrir Notas Fiscais US Vale Verde"
+              aria-describedby="tooltip-notas-fiscais"
+            >
+              <span class="tool-card__hex" aria-hidden="true">
+                <svg viewBox="0 0 48 48" role="img"><path d="M15 10h13l6 6v22H15z" /><path d="M28 10v7h6M19 23h11m-11 5h11m-11 5h7" /><path d="M11 14v24h17" /></svg>
+              </span>
+              <h3>Notas Fiscais - US Vale Verde</h3>
+              <span id="tooltip-notas-fiscais" class="tool-card__tooltip" role="tooltip"><span class="tool-card__tooltip-status">Em atualização</span>Valor do frete, total das NFs, quantidade e número de notas por mês.</span>
+            </a>
+
+            <a
+              class="tool-card"
+              href="https://silvathiagoferreira.github.io/planos-de-fogo-us-vale-verde/"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-group="locais"
+              data-search="planos de fogo previsto realizado séries temporais aspecto precisão plano tabela planejamento desmonte atualização"
+              aria-label="Abrir Planos de Fogo Previsto e Realizado"
+              aria-describedby="tooltip-planos-fogo"
+            >
+              <span class="tool-card__hex" aria-hidden="true">
+                <svg viewBox="0 0 48 48" role="img"><path d="M12 16h24M12 24h24M12 32h24M18 12v24m12-24v24" /><path d="M15 12h6m9 0h3" /></svg>
+              </span>
+              <h3>Planos de Fogo (Previsto × Realizado)</h3>
+              <span id="tooltip-planos-fogo" class="tool-card__tooltip" role="tooltip"><span class="tool-card__tooltip-status">Em atualização</span>Séries temporais por aspecto, precisão do plano e tabela.</span>
+            </a>
+
+            <a
+              class="tool-card"
+              href="https://silvathiagoferreira.github.io/temposemovimentos/#/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-group="locais"
+              data-search="tempos movimentos carregamento explosivo frota operação atualização"
+              aria-label="Abrir Tempos e Movimentos"
+              aria-describedby="tooltip-tempos-movimentos"
+            >
+              <span class="tool-card__hex" aria-hidden="true">
+                <svg viewBox="0 0 48 48" role="img"><circle cx="24" cy="25" r="11" /><path d="M24 25v-6m0 6 5 3M20 10h8m-4 0v4" /><path d="m33 16 3-3" /></svg>
+              </span>
+              <h3>Tempos e Movimentos | Carregamento de Explosivo</h3>
+              <span id="tooltip-tempos-movimentos" class="tool-card__tooltip" role="tooltip"><span class="tool-card__tooltip-status">Em atualização</span>Acompanhamento da frota em operações de carregamento de explosivo.</span>
+            </a>
+
+            <a
+              class="tool-card"
+              href="https://silvathiagoferreira.github.io/kpis-seguranca-trabalho/"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-group="locais"
+              data-search="kpis segurança trabalho pessoas processos saúde ocupacional capacitação prevenção atualização"
+              aria-label="Abrir KPIs de Segurança do Trabalho"
+              aria-describedby="tooltip-kpis-seguranca"
+            >
+              <span class="tool-card__hex" aria-hidden="true">
+                <svg viewBox="0 0 48 48" role="img"><path d="M24 10 35 14v9c0 8-5 12-11 15-6-3-11-7-11-15v-9z" /><path d="m18 24 4 4 8-9" /></svg>
+              </span>
+              <h3>KPI's de Segurança do Trabalho - Pessoas e Processos</h3>
+              <span id="tooltip-kpis-seguranca" class="tool-card__tooltip" role="tooltip"><span class="tool-card__tooltip-status">Em atualização</span>Indicadores de saúde ocupacional, capacitação, processos e prevenção.</span>
+            </a>
+          </div>
+        </section>
+      </section>
+
+      <p id="directory-empty" class="directory-empty" hidden>Nenhum dashboard corresponde aos filtros atuais. Ajuste a busca ou selecione outro grupo.</p>
+
+      <footer class="page-footer" aria-label="Rodapé">
+        <p class="page-footer__meta"><span class="page-footer__dot" aria-hidden="true"></span>Hub operacional OpenBlast</p>
+        <p class="page-footer__meta">US Vale Verde</p>
+      </footer>
+    </main>
+  </body>
 </html>
