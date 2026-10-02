@@ -236,6 +236,7 @@ button, input, select { font: inherit; }
   line-height: 1.2;
   text-transform: uppercase;
 }
+.tool-card__status--active { color: var(--red-enaex); }
 .tool-card__tooltip {
   position: absolute;
   z-index: 10;
