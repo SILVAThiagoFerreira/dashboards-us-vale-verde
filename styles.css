@@ -202,21 +202,24 @@ button, input, select { font: inherit; }
 .tool-card[hidden] { display: none; }
 .tool-card__hex {
   display: grid;
+  flex: 0 0 auto;
   place-items: center;
-  width: 36px;
-  height: 36px;
-  color: var(--red);
+  width: 60px;
+  height: 52px;
+  color: var(--white);
+  background: var(--red);
+  clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
 }
 .tool-card__hex svg {
-  width: 36px;
-  height: 36px;
+  width: 28px;
+  height: 28px;
   fill: none;
   stroke: currentColor;
-  stroke-width: 1.6;
+  stroke-width: 1.7;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-.tool-card--development .tool-card__hex { color: var(--gray-mid); }
+.tool-card--development .tool-card__hex { background: var(--gray-mid); }
 .tool-card h3 {
   margin: 14px 0 0;
   color: var(--charcoal);
