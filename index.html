@@ -8,13 +8,7 @@
     <meta name="application-name" content="Hub de Dashboards | OpenBlast" />
     <link rel="icon" href="./assets/enaex-favicon.png" type="image/png" />
     <title>Hub de Dashboards | OpenBlast</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./styles.css?v=hsec-active-20261002-1" />
+    <link rel="stylesheet" href="./styles.css?v=restyle-20261018-1" />
     <script src="./script.js?v=hsec-active-20261002-1" defer></script>
   </head>
   <body>
@@ -23,10 +17,15 @@
         <img class="brand__logo" src="./assets/openblast-logo.png" alt="" />
         <span class="brand__wordmark">Open<strong>Blast</strong></span>
       </a>
-      <span class="topbar__title">Dashboards · US Vale Verde</span>
+      <img class="topbar__enaex" src="./assets/enaex-logo.png" alt="Enaex" />
     </header>
 
     <main class="shell page">
+      <section class="hero">
+        <h1>Dashboards</h1>
+        <p class="hero__sub">US Vale Verde · painéis operacionais da unidade</p>
+      </section>
+
       <section class="directory-controls" aria-label="Encontrar dashboards">
         <div class="directory-search">
           <label for="dashboard-search">Buscar dashboard</label>
@@ -214,7 +213,7 @@
       <p id="directory-empty" class="directory-empty" hidden>Nenhum dashboard corresponde aos filtros atuais. Ajuste a busca ou selecione outro grupo.</p>
 
       <footer class="page-footer" aria-label="Rodapé">
-        <p class="page-footer__meta"><span class="page-footer__dot" aria-hidden="true"></span>Hub operacional OpenBlast</p>
+        <p class="page-footer__meta">Hub operacional OpenBlast</p>
         <p class="page-footer__meta">US Vale Verde</p>
       </footer>
     </main>
