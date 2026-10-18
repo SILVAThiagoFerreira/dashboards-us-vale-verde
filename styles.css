@@ -180,17 +180,14 @@ button, input, select { font: inherit; }
   text-decoration: none;
   background: var(--white);
   border: 1px solid var(--rule-light);
-  border-top: 3px solid transparent;
   border-radius: var(--radius);
   transition: border-color 150ms ease;
 }
 .tool-card:hover {
   z-index: 20;
   border-color: var(--gray-light);
-  border-top-color: var(--red);
 }
 .tool-card--development { color: var(--gray-mid); }
-.tool-card--development:hover { border-top-color: var(--gray-mid); }
 .tool-card:focus-visible { position: relative; z-index: 20; }
 .tool-card:focus-visible,
 .brand:focus-visible,
@@ -200,28 +197,38 @@ button, input, select { font: inherit; }
   outline-offset: 3px;
 }
 .tool-card[hidden] { display: none; }
+/* Hexágono vazado (contorno fino), pontas à esquerda e à direita */
 .tool-card__hex {
-  display: grid;
+  display: block;
   flex: 0 0 auto;
-  place-items: center;
-  width: 60px;
-  height: 52px;
-  color: var(--white);
-  background: var(--red);
-  clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+  width: 40px;
+  height: 36px;
+  color: var(--red);
 }
-.tool-card__hex svg {
-  width: 28px;
-  height: 28px;
+.tool-card__hex > svg {
+  display: block;
+  width: 40px;
+  height: 36px;
+  overflow: visible;
+}
+.tool-card__hex polygon {
+  fill: var(--white);
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+}
+.tool-card__icon {
+  overflow: visible;
   fill: none;
   stroke: currentColor;
-  stroke-width: 1.7;
+  stroke-width: 4.5;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-.tool-card--development .tool-card__hex { background: var(--gray-mid); }
+.tool-card__icon * { fill: none; }
+.tool-card--development .tool-card__hex { color: var(--gray-mid); }
 .tool-card h3 {
-  margin: 14px 0 0;
+  margin: 12px 0 0;
   color: var(--charcoal);
   font-size: 1rem;
   font-weight: 700;
